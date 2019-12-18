@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>View Show</title>
+</head>
+
+<body>
+  <div id='container'>
+
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Hello, {{request.session.first_name}}! Here are the job details.</span>
+      <a href="/users/success">Dashboard</a>
+      <a href="/users/logout">Log Out</a>
+    </nav>
+    <div class="jumbotron">
+      <h1 class="display-4">{{ job_view.title }}</h1>
+      <br>
+      <br>
+      <p class="lead">Description: {{job_view.desc}}
+      </p>
+      <p class="lead">Locaiton: {{job_view.location}}
+      </p>
+      <p class="lead">Locaiton: {{job_view.location}}
+      </p>
+      <p class="lead">Posted on: {{ created_date_view }}
+      </p>
+      <p class="lead">Posted by: {{ job_view.user.first_name }} {{ job_view.user.last_name}}
+      </p>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
